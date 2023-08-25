@@ -57,7 +57,7 @@ class Login extends Component {
           <Separator height={'5'} />
           <VStack>
             <Text p={'5px'} fontSize={'12px'} color="#3E4450" textAlign="left">
-              Email
+              No Telepon
             </Text>
             <Input
               w={'100%'}
@@ -84,8 +84,8 @@ class Login extends Component {
                   <Ionicons
                     as={Ionicons}
                     name={this.state.show ? 'eye' : 'eye-off'}
-                    size={20}
-                    mr={'10px'}
+                    size={18}
+                    marginRight={15}
                     color="muted.400"
                   />
                 </Pressable>
@@ -93,7 +93,7 @@ class Login extends Component {
             />
           </VStack>
           <Separator height={'5'} />
-          <HStack space={'3px'} alignSelf="center">
+          <HStack space={'5px'} alignSelf="center">
             <Text fontSize={'12px'} color="#3E4450" textAlign="center">
               Belum punya akun?
             </Text>
@@ -102,14 +102,20 @@ class Login extends Component {
                 Register
               </Text>
             </Pressable>
-          </HStack>
+          </HStack> 
+          <Separator height={'1'} />
+          <Pressable onPress={() => navigation.navigate('ForgotPassword')}>
+            <Text fontSize={'12px'} color="#ACACAC" textAlign="center">
+              Lupa password?
+            </Text>
+          </Pressable>
           <Separator height={'10'} />
           <Center>
-            <Pressable onPress={() => navigation.navigate('SelectService')}>
+            <Pressable onPress={() => navigation.navigate('LoginSucced_Submitted')}>
               <Box
                 mt={'10px'}
-                w={'120px'}
-                h={'40px'}
+                w={'168px'}
+                h={'42px'}
                 borderRadius={'11px'}
                 bg="#007DFE"
                 p={'7px'}>

@@ -6,12 +6,19 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
   Start,
   Login,
+  LoginSucced_Submitted,
+  ForgotPassword,
+  ForgotPassword2,
+  PasswordFilled,
+  PasswordRenewed_Submitted,
   Register,
-  SelectService,
-  PanicActive,
-  PanicInactive,
-  Data,
+  OTP_Verification,
+  RegisterSubmitted,
+  FindLocation,
+  FindLocation2,
+  FindLocation3,
   DataSubmitted,
+  CameraCoba2,
 } from './screens';
 
 const Stack = createNativeStackNavigator();
@@ -31,35 +38,70 @@ const App = () => {
             name="Login"
             component={Login}
             options={{ headerShown: false }}
-          />
+          /> 
+          <Stack.Screen
+            name="LoginSucced_Submitted"
+            component={LoginSucced_Submitted}
+            options={{ headerShown: false }}
+          /> 
+          <Stack.Screen
+            name="ForgotPassword"
+            component={ForgotPassword}
+            options={{ headerShown: false }}
+          /> 
+          <Stack.Screen
+            name="ForgotPassword2"
+            component={ForgotPassword2}
+            options={{ headerShown: false }}
+          /> 
+          <Stack.Screen
+            name="PasswordFilled"
+            component={PasswordFilled}
+            options={{ headerShown: false }}
+          /> 
+          <Stack.Screen
+            name="PasswordRenewed_Submitted"
+            component={PasswordRenewed_Submitted}
+            options={{ headerShown: false }}
+          /> 
           <Stack.Screen
             name="Register"
             component={Register}
             options={{ headerShown: false }}
           /> 
-           <Stack.Screen
-            name="SelectService"
-            component={SelectService}
+          <Stack.Screen
+            name="OTP_Verification"
+            component={OTP_Verification}
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="PanicActive"
-            component={PanicActive}
+            name="RegisterSubmitted"
+            component={RegisterSubmitted}
             options={{ headerShown: false }}
-          /> 
-           <Stack.Screen
-            name="PanicInactive"
-            component={PanicInactive}
+          />
+          <Stack.Screen
+            name="FindLocation"
+            component={FindLocation}
             options={{ headerShown: false }}
           /> 
           <Stack.Screen
-            name="Data"
-            component={Data}
+            name="FindLocation2"
+            component={FindLocation2}
+            options={{ headerShown: false }}
+          /> 
+          <Stack.Screen
+            name="FindLocation3"
+            component={FindLocation3}
             options={{ headerShown: false }}
           /> 
           <Stack.Screen
             name="DataSubmitted"
             component={DataSubmitted}
+            options={{ headerShown: false }}
+          /> 
+          <Stack.Screen
+            name="CameraCoba2"
+            component={CameraCoba2}
             options={{ headerShown: false }}
           /> 
         </Stack.Navigator>

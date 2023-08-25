@@ -71,6 +71,7 @@ class Start extends Component {
             />
             <Separator height={'10'} />
             <Separator height={'5'} />
+            <Separator height={'10'} />
             <Pressable
               onPress={() => navigation.navigate('Login')}>
               <Box
@@ -86,6 +87,62 @@ class Start extends Component {
                   textAlign="center"
                   fontWeight="medium">
                   Get Started
+                </Text>
+              </Box>
+            </Pressable> 
+            <HStack>
+            <Pressable
+              onPress={() => navigation.navigate('ImagePickerExample')}>
+              <Box
+                mt={'10px'}
+                w={'120px'}
+                h={'40px'}
+                borderRadius={'11px'}
+                bg="#007DFE"
+                p={'7px'}>
+                <Text
+                  fontSize={'16px'}
+                  color="#FFFFFF"
+                  textAlign="center"
+                  fontWeight="medium">
+                  camera
+                </Text>
+              </Box>
+            </Pressable> 
+            <Pressable
+              onPress={() => navigation.navigate('CobaCamera')}>
+              <Box
+                mt={'10px'}
+                w={'120px'}
+                h={'40px'}
+                borderRadius={'11px'}
+                bg="#007DFE"
+                p={'7px'}>
+                <Text
+                  fontSize={'16px'}
+                  color="#FFFFFF"
+                  textAlign="center"
+                  fontWeight="medium">
+                  cobaCamera
+                </Text>
+              </Box>
+            </Pressable> 
+            </HStack>
+            <Pressable
+              onPress={() => navigation.navigate('CameraCoba')}>
+              <Box
+                mt={'10px'}
+                w={'120px'}
+                h={'40px'}
+                borderRadius={'11px'}
+                bg="#007DFE"
+                p={'7px'}>
+                <Text
+                  fontSize={'16px'}
+                  color="#FFFFFF"
+                  textAlign="center"
+                  fontWeight="medium">
+                  cameraCoba2
                 </Text>
               </Box>
             </Pressable>

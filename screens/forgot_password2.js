@@ -17,7 +17,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import Separator from '../components/separator';
 
-class Register extends Component {
+class ForgotPassword2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,30 +40,25 @@ class Register extends Component {
             color="#3E4450"
             textAlign="center"
             fontWeight="Bold">
-            Register
+            Lupa Password
           </Text>
-          <Separator height={'5'} />
-          <Center>
+          <Text p={'5px'} fontSize={'12px'} color="#ACACAC" textAlign="center">
+            Masukkan nomor telepon Anda dan kami mengirimkan kode OTP ke nomor Anda
+          </Text>
+          <Separator height={'10'} />
+          <Separator height={'10'} />
+          <Center h={'150px'}>
             <Image
               bg="#FFFFFF"
-              w={'220px'}
-              h={'220px'}
+              w={'250px'}
+              h={'202px'}
               borderRadius={'10px'}
-              source={require('../assets/Register.png')}
+              source={require('../assets/ForgotPassword.png')}
             />
           </Center>
+          <Separator height={'10'} />
           <Separator height={'5'} />
           <VStack>
-            <Text p={'5px'} fontSize={'12px'} color="#3E4450" textAlign="left">
-              Nama
-            </Text>
-            <Input
-              w={'100%'}
-              h={'40px'}
-              borderRadius={'13px'}
-              bg="#F5F5F5"
-              alignSelf="center"
-            />
             <Text p={'5px'} fontSize={'12px'} color="#3E4450" textAlign="left">
               No Telepon
             </Text>
@@ -73,50 +68,28 @@ class Register extends Component {
               borderRadius={'13px'}
               bg="#F5F5F5"
               alignSelf="center"
-            />
-            <Text p={'5px'} fontSize={'12px'} color="#3E4450" textAlign="left">
-              Password
-            </Text>
-            <Input
-              w={{
-                base: '100%',
-                md: '25%',
-              }}
-              h={'40px'}
-              borderRadius={'13px'}
-              bg="#F5F5F5"
-              alignSelf="center"
-              type={this.state.show ? 'text' : 'password'}
-              InputRightElement={
-                <Pressable onPress={this.toggleShow}>
-                  <Ionicons
-                    as={Ionicons}
-                    name={this.state.show ? 'eye' : 'eye-off'}
-                    size={18}
-                    marginRight={15}
-                    color="muted.400"
-                  />
-                </Pressable>
-              }
+              placeholder='0856789101112'
             />
           </VStack>
           <Separator height={'5'} />
-          <HStack space={'5px'} alignSelf="center">
+          {/* <VStack space={'3px'} alignSelf="center">
             <Text fontSize={'12px'} color="#3E4450" textAlign="center">
-              Sudah punya akun?
+            Belum menerima kode verifikasi?
             </Text>
-            <Pressable onPress={() => navigation.navigate('Login')}>
+            <Pressable onPress={() => navigation.navigate('Register')}>
               <Text fontSize={'12px'} color="#007DFE" textAlign="center">
-                Login
+              Kirim ulang kode
               </Text>
             </Pressable>
-          </HStack>
+          </VStack> */}
+          <Separator height={'10'} />
+          <Separator height={'10'} />
           <Separator height={'6'} />
           <Center>
-            <Pressable onPress={() => navigation.navigate('OTP_Verification')}>
+            <Pressable onPress={() => navigation.navigate('PasswordFilled')}>
               <Box
                 mt={'10px'}
-                w={'148px'}
+                w={'143px'}
                 h={'42px'}
                 borderRadius={'11px'}
                 bg="#007DFE"
@@ -137,4 +110,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default ForgotPassword2;
